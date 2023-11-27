@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=<weatherapikey>&zip=90210,US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json
+      User-Agent:
+      - OpenWeather Ruby Client/0.4.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Mon, 27 Nov 2023 01:23:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '475'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?zip=90210%2cus"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-118.4065,"lat":34.0901},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"base":"stations","main":{"temp":289.32,"feels_like":288.01,"temp_min":287.45,"temp_max":291.25,"pressure":1012,"humidity":39},"visibility":10000,"wind":{"speed":4.12,"deg":280},"clouds":{"all":0},"dt":1701047985,"sys":{"type":2,"id":2082254,"country":"US","sunrise":1701009402,"sunset":1701045929},"timezone":-28800,"id":0,"name":"Beverly
+        Hills","cod":200}'
+  recorded_at: Mon, 27 Nov 2023 01:23:10 GMT
+recorded_with: VCR 6.2.0

@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class='form-title'>Enter your address:</h1>
+  <%= form_for @address do |f| %>
+    <div class="col-md-6">
+      <%= f.label :address_1 %><br />
+      <%= f.text_field  :address_1, class: "address-form-text-area" %><br />
+
+      <%= f.label :address_2%><br />
+      <%= f.text_field  :address_2, class: "address-form-text-area" %><br />
+
+      <%= f.label :city %><br />
+      <%= f.text_field  :city, class: "address-form-text-area" %><br />
+
+      <%= f.label :state%><br />
+      <%= f.text_field  :state, class: "address-form-text-area" %><br />
+
+      <%= f.label :zip_code%><br />
+      <%= f.text_field  :zip_code, required: true, class: "address-form-text-area" %><br />
+      <br />
+      <%= f.submit 'Get the weather', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

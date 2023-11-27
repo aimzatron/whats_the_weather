@@ -1,0 +1,11 @@
+<div class='container'>
+    <%= image_tag 'WeatherLogo.png', style: 'width:60px;' %>
+    <h1> Weather for </h1> 
+    <h1 class='zip'><%=@address.zip_code%></h1>
+    <% if @cached %>
+        <i>This Data is Cached</i>
+    <% end %>
+
+    <%= render partial: "weather_for_zip", locals: { weather_data: @weather_data } %>
+</div>
+
